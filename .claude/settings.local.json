@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh repo create:*)",
+      "Bash(npm create:*)",
+      "Bash(npm install)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git config:*)",
+      "Bash(git checkout:*)",
+      "Bash(git push:*)",
+      "Bash(python:*)",
+      "Bash(npx serve:*)",
+      "Bash(git init:*)",
+      "Bash(git rm:*)",
+      "Bash(git remote add:*)",
+      "Bash(gh repo delete:*)",
+      "Bash(npm run dev:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
