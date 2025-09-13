@@ -16,7 +16,9 @@
       "Bash(git remote add:*)",
       "Bash(gh repo delete:*)",
       "Bash(npm run dev:*)",
-      "Read(//c/Users/reutn/OneDrive/Desktop/**)"
+      "Read(//c/Users/reutn/OneDrive/Desktop/**)",
+      "Read(//c/Users/reutn/Downloads/**)",
+      "Read(//c/Users/reutn/OneDrive/Pictures/Screenshots/**)"
     ],
     "deny": [],
     "ask": []

@@ -10,18 +10,43 @@
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Mobile Sticky Header -->
+    <header class="mobile-header">
+        <div class="mobile-header-content">
+            <a href="#" class="mobile-header-download-btn">Download CV</a>
+            <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <nav class="mobile-nav" role="navigation" aria-label="Main navigation">
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#about" class="nav-link active" aria-current="page">about</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">résumé</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <!-- Main Content Container -->
     <div class="main-container">
         <!-- Left Content -->
         <main id="main-content" class="left-content">
-            <!-- Navigation Menu -->
+            <!-- Desktop Navigation Menu -->
             <nav class="page-navigation" role="navigation" aria-label="Main navigation">
-                <ul class="nav-menu">
+                <ul class="desktop-nav-menu">
                     <li class="nav-item"><a href="#about" class="nav-link active" aria-current="page">about</a></li>
                     <li class="nav-item"><a href="#skills" class="nav-link">résumé</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-link">contact</a></li>
                 </ul>
             </nav>
+
+            <!-- Mobile Green Image Section -->
+            <div class="mobile-image-section">
+                <img src="profile-photo.jpg" alt="Ido Mosseri" class="profile-photo">
+            </div>
 
             <div class="content-wrapper">
                 <!-- Hero Section -->
@@ -44,7 +69,7 @@
                 <a href="#about" class="see-cv-btn">
                     See full CV <span class="arrow">↓</span>
                 </a>
-            </section>
+            </header>
 
             <!-- About Section -->
             <section id="about" class="section" aria-labelledby="about-heading">
@@ -160,5 +185,38 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const hamburger = document.querySelector('.hamburger');
+
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+
+        // Close menu when clicking on a nav link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navMenu = document.getElementById('navMenu');
+                const hamburger = document.querySelector('.hamburger');
+
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const navMenu = document.getElementById('navMenu');
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('.mobile-header');
+
+            if (!nav.contains(e.target)) {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
