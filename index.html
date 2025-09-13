@@ -8,25 +8,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">Curriculum Vitae</div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="#about" class="nav-link">about</a></li>
-                <li class="nav-item"><a href="#skills" class="nav-link">résumé</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">contact</a></li>
-            </ul>
-            <a href="#" class="download-btn">Download CV</a>
-        </div>
-    </nav>
-
     <!-- Main Content Container -->
     <div class="main-container">
         <!-- Left Content -->
         <div class="left-content">
-            <!-- Hero Section -->
-            <section class="hero-section">
+            <!-- Navigation Menu -->
+            <nav class="page-navigation">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#about" class="nav-link">about</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">résumé</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="content-wrapper">
+                <!-- Hero Section -->
+                <section class="hero-section">
                 <h1 class="hero-name">Ido Mosseri</h1>
                 <p class="hero-title">Technical SEO Lead</p>
 
@@ -148,12 +145,16 @@
                     <a href="#" class="contact-link">Twitter</a>
                 </div>
             </section>
+            </div>
         </div>
 
         <!-- Right Side - Fixed Image -->
         <div class="right-content">
+            <!-- Download Button -->
+            <a href="#" class="download-btn-right">Download CV</a>
+
             <div class="image-container">
-                <img src="https://via.placeholder.com/400x500/8B9A8E/FFFFFF?text=Ido+Mosseri" alt="Ido Mosseri" class="profile-photo">
+                <img src="profile-photo.jpg" alt="Ido Mosseri" class="profile-photo">
             </div>
         </div>
     </div>

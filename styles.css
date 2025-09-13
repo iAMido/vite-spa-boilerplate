@@ -11,45 +11,25 @@ body {
     background: #f8f9fa;
 }
 
-/* Navigation Bar */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    padding: 0 50px;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
-    height: 70px;
-}
-
-.nav-logo {
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: #8B9A8E;
-    letter-spacing: 0.5px;
+/* Page Navigation */
+.page-navigation {
+    width: 379px;
+    max-width: 379px;
+    padding: 30px 0 50px 0;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
     gap: 40px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-link {
     text-decoration: none;
     color: #666;
-    font-size: 0.95rem;
+    font-size: 15px;
     font-weight: 400;
     transition: color 0.3s ease;
     text-transform: lowercase;
@@ -64,7 +44,7 @@ body {
     color: white;
     padding: 12px 24px;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 15px;
     font-weight: 500;
     border-radius: 4px;
     transition: background 0.3s ease;
@@ -74,22 +54,48 @@ body {
     background: #333;
 }
 
+/* Right Side Download Button */
+.download-btn-right {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: #1a1a1a;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+    z-index: 1000;
+}
+
+.download-btn-right:hover {
+    background: #333;
+}
+
 /* Main Container */
 .main-container {
     display: grid;
-    grid-template-columns: 1fr 400px;
+    grid-template-columns: 1fr 1fr;
     min-height: 100vh;
-    max-width: 1400px;
-    margin: 0 auto;
+    width: 100%;
     background: white;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
-    margin-top: 70px;
 }
 
 /* Left Content */
 .left-content {
-    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
     overflow-y: auto;
+}
+
+.content-wrapper {
+    width: 379px;
+    max-width: 379px;
+    padding: 0 0 80px 0;
 }
 
 /* Hero Section */
@@ -98,16 +104,17 @@ body {
 }
 
 .hero-name {
-    font-size: 4.5rem;
+    font-size: 65px;
     font-weight: 300;
     color: #1a1a1a;
-    line-height: 0.9;
+    line-height: 1;
     margin-bottom: 16px;
     letter-spacing: -0.02em;
+    white-space: nowrap;
 }
 
 .hero-title {
-    font-size: 1.5rem;
+    font-size: 28px;
     color: #333;
     font-weight: 400;
     margin-bottom: 50px;
@@ -118,7 +125,7 @@ body {
 }
 
 .hero-contact p {
-    font-size: 1rem;
+    font-size: 15px;
     color: #555;
     margin-bottom: 8px;
     font-weight: 400;
@@ -176,11 +183,12 @@ body {
 
 /* Sections */
 .section {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
+    padding: 30px 0;
 }
 
 .section h2 {
-    font-size: 1rem;
+    font-size: 22px;
     font-weight: 600;
     color: #1a1a1a;
     text-transform: uppercase;
@@ -200,7 +208,7 @@ body {
 }
 
 .section p {
-    font-size: 0.95rem;
+    font-size: 15px;
     color: #555;
     line-height: 1.6;
     margin-bottom: 15px;
@@ -220,7 +228,7 @@ body {
 }
 
 .skills-list li {
-    font-size: 0.95rem;
+    font-size: 15px;
     color: #555;
     line-height: 1.6;
     margin-bottom: 12px;
@@ -242,28 +250,28 @@ body {
 }
 
 .job-item h3 {
-    font-size: 1rem;
+    font-size: 15px;
     font-weight: 500;
     color: #1a1a1a;
     margin-bottom: 4px;
 }
 
 .company {
-    font-size: 0.95rem;
+    font-size: 15px;
     color: #333;
     font-weight: 400;
     margin-bottom: 2px;
 }
 
 .duration {
-    font-size: 0.85rem;
+    font-size: 15px;
     color: #8B9A8E;
     margin-bottom: 10px;
     font-weight: 400;
 }
 
 .description {
-    font-size: 0.9rem;
+    font-size: 15px;
     color: #555;
     line-height: 1.6;
     font-weight: 400;
@@ -275,27 +283,27 @@ body {
 }
 
 .education-item h3 {
-    font-size: 0.95rem;
+    font-size: 15px;
     font-weight: 500;
     color: #1a1a1a;
     margin-bottom: 4px;
 }
 
 .institution {
-    font-size: 0.9rem;
+    font-size: 15px;
     color: #333;
     margin-bottom: 2px;
     font-weight: 400;
 }
 
 .year {
-    font-size: 0.85rem;
+    font-size: 15px;
     color: #8B9A8E;
     font-weight: 400;
 }
 
 .education-item .description {
-    font-size: 0.85rem;
+    font-size: 15px;
     color: #555;
     margin-top: 4px;
     margin-bottom: 4px;
@@ -312,7 +320,7 @@ body {
 .contact-link {
     color: #8B9A8E;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 15px;
     font-weight: 400;
     transition: color 0.3s ease;
 }
@@ -332,11 +340,11 @@ body {
 
 .image-container {
     position: fixed;
-    top: 50%;
+    top: 0;
     right: 0;
-    width: 400px;
+    width: 50vw;
+    max-width: 700px;
     height: 100vh;
-    transform: translateY(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -344,8 +352,8 @@ body {
 }
 
 .profile-photo {
-    width: 300px;
-    height: 380px;
+    width: 306px;
+    height: 420px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -353,52 +361,76 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-    .navbar {
-        padding: 0 30px;
-    }
-
     .main-container {
-        grid-template-columns: 1fr 350px;
+        grid-template-columns: 1fr 1fr;
     }
 
-    .left-content {
-        padding: 60px 40px;
+    .page-navigation {
+        width: 320px;
+        max-width: 320px;
+    }
+
+    .content-wrapper {
+        width: 320px;
+        max-width: 320px;
     }
 
     .hero-name {
-        font-size: 3.5rem;
+        font-size: 55px;
     }
 
-    .image-container {
-        width: 350px;
+    .hero-title {
+        font-size: 24px;
     }
 
     .profile-photo {
-        width: 250px;
-        height: 320px;
+        width: 260px;
+        height: 360px;
+    }
+
+    .nav-menu {
+        gap: 30px;
     }
 }
 
 @media (max-width: 968px) {
-    .nav-menu {
-        display: none;
+    .page-navigation {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 20px 30px 20px;
     }
 
-    .navbar {
-        padding: 0 20px;
+    .nav-menu {
+        gap: 25px;
     }
 
     .main-container {
         grid-template-columns: 1fr;
-        margin-top: 70px;
     }
 
     .left-content {
-        padding: 40px 30px;
+        padding: 0;
+    }
+
+    .content-wrapper {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 20px 40px 20px;
     }
 
     .hero-name {
-        font-size: 3rem;
+        font-size: 45px;
+    }
+
+    .hero-title {
+        font-size: 20px;
+    }
+
+    .download-btn-right {
+        top: 15px;
+        right: 15px;
+        padding: 10px 20px;
+        font-size: 14px;
     }
 
     .right-content {
@@ -423,15 +455,42 @@ body {
 
 @media (max-width: 480px) {
     .left-content {
-        padding: 30px 20px;
+        padding: 0;
+    }
+
+    .page-navigation {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px 15px 25px 15px;
+    }
+
+    .nav-menu {
+        gap: 20px;
+    }
+
+    .content-wrapper {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px 30px 15px;
     }
 
     .hero-name {
-        font-size: 2.5rem;
+        font-size: 35px;
     }
 
     .hero-title {
-        font-size: 1.2rem;
+        font-size: 18px;
+    }
+
+    .section h2 {
+        font-size: 18px;
+    }
+
+    .download-btn-right {
+        top: 10px;
+        right: 10px;
+        padding: 8px 16px;
+        font-size: 13px;
     }
 
     .profile-photo {
@@ -441,6 +500,7 @@ body {
 
     .section {
         margin-bottom: 40px;
+        padding: 20px 0;
     }
 
     .job-item {
