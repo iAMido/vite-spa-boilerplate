@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ido Mosseri - Technical SEO Lead</title>
+    <meta name="description" content="Technical SEO Lead with 10+ years experience in optimization and strategic planning">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Main Content Container -->
     <div class="main-container">
         <!-- Left Content -->
-        <div class="left-content">
+        <main id="main-content" class="left-content">
             <!-- Navigation Menu -->
-            <nav class="page-navigation">
+            <nav class="page-navigation" role="navigation" aria-label="Main navigation">
                 <ul class="nav-menu">
-                    <li class="nav-item"><a href="#about" class="nav-link">about</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link active" aria-current="page">about</a></li>
                     <li class="nav-item"><a href="#skills" class="nav-link">résumé</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-link">contact</a></li>
                 </ul>
@@ -23,9 +25,9 @@
 
             <div class="content-wrapper">
                 <!-- Hero Section -->
-                <section class="hero-section">
-                <h1 class="hero-name">Ido Mosseri</h1>
-                <p class="hero-title">Technical SEO Lead</p>
+                <header class="hero-section">
+                    <h1 class="hero-name">Ido Mosseri</h1>
+                    <p class="hero-title" role="doc-subtitle">Technical SEO Lead</p>
 
                 <div class="hero-contact">
                     <p><strong>Phone</strong> 050-6790792</p>
@@ -45,14 +47,14 @@
             </section>
 
             <!-- About Section -->
-            <section id="about" class="section">
-                <h2>ABOUT</h2>
+            <section id="about" class="section" aria-labelledby="about-heading">
+                <h2 id="about-heading">ABOUT</h2>
                 <p>Highly driven and result-oriented SEO Specialist with over 10 years of experience in both hands-on optimization and strategic planning. I thrive in fast-paced environments that require effective assignment prioritization with tight deadlines. My approach is business-oriented with a strong focus on conversion optimization, A/B testing, quick wins in rankings, content marketing, and RankBrain optimization. I stay current with the constant changes in search engine optimization trends, algorithms, and ranking variables, ensuring my strategies deliver maximum ROI.</p>
             </section>
 
             <!-- Skills Section -->
-            <section id="skills" class="section">
-                <h2>SKILLS & EXPERTISE</h2>
+            <section id="skills" class="section" aria-labelledby="skills-heading">
+                <h2 id="skills-heading">SKILLS & EXPERTISE</h2>
                 <ul class="skills-list">
                     <li>Technical SEO - Site architecture, crawlability, structured data, meta optimization</li>
                     <li>Content Strategy - Keyword research, content planning, optimization for RankBrain</li>
@@ -133,8 +135,8 @@
             </section>
 
             <!-- Contact Section -->
-            <section id="contact" class="section">
-                <h2>CONTACT</h2>
+            <section id="contact" class="section" aria-labelledby="contact-heading">
+                <h2 id="contact-heading">CONTACT</h2>
                 <p><strong>Phone</strong> 050-6790792</p>
                 <p><strong>Email</strong> idomosseri@gmail.com</p>
                 <p><strong>Address</strong> Kfar Saba, Israel</p>
@@ -146,10 +148,10 @@
                 </div>
             </section>
             </div>
-        </div>
+        </main>
 
         <!-- Right Side - Fixed Image -->
-        <div class="right-content">
+        <aside class="right-content" role="complementary">
             <!-- Download Button -->
             <a href="#" class="download-btn-right">Download CV</a>
 
