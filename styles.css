@@ -139,7 +139,7 @@ body {
     position: fixed;
     top: 30px;
     right: 30px;
-    background: var(--primary);
+    background: #000;
     color: white;
     padding: 12px 24px;
     text-decoration: none;
@@ -153,9 +153,9 @@ body {
 
 .download-btn-right:hover,
 .download-btn-right:focus {
-    background: #1D4ED8;
+    background: #333;
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.2);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Main Container */
@@ -474,6 +474,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-right: 100px;
     background: #8B9A8E;
 }
 
@@ -535,8 +536,9 @@ body {
     .mobile-header-content {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         padding: 15px 20px;
+        position: relative;
     }
 
     .mobile-header-download-btn {
@@ -563,6 +565,8 @@ body {
         width: 24px;
         height: 18px;
         justify-content: space-between;
+        position: absolute;
+        right: 20px;
     }
 
     .hamburger span {
