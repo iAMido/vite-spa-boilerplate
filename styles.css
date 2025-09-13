@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Left Content - Resume */
+.left-content {
+    width: 60%;
+    padding: 80px 60px 80px 80px;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+.header {
+    margin-bottom: 60px;
+}
+
+.name {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+    color: #1a1a1a;
+}
+
+.title {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.contact-info strong {
+    font-weight: 500;
+    color: #333;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.link {
+    color: #8B9A8E;
+    text-decoration: underline;
+    font-size: 0.95rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #6B7A6E;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background-color: #8B9A8E;
+}
+
+.about p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+.skill-category {
+    margin-bottom: 25px;
+}
+
+.skill-category h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.skill-category p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.achievements ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.achievements li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.achievements li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #8B9A8E;
+    font-weight: bold;
+}
+
+.job {
+    margin-bottom: 35px;
+}
+
+.job h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+}
+
+.company {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.duration {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 12px;
+    font-weight: 400;
+}
+
+.description {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.education-item {
+    margin-bottom: 25px;
+}
+
+.education-item h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+}
+
+.institution {
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 4px;
+    font-weight: 400;
+}
+
+.year {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 400;
+}
+
+.education-item .description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.footer {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+/* Right Content - Image */
+.right-content {
+    width: 40%;
+    background-color: #8B9A8E;
+    position: relative;
+}
+
+.profile-image-container {
+    position: sticky;
+    top: 100px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.profile-image {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .left-content {
+        padding: 60px 40px 60px 60px;
+    }
+    
+    .name {
+        font-size: 3rem;
+    }
+    
+    .profile-image {
+        width: 240px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .left-content {
+        width: 100%;
+        padding: 40px 30px;
+    }
+    
+    .right-content {
+        width: 100%;
+        min-height: 400px;
+        position: relative;
+    }
+    
+    .profile-image-container {
+        position: static;
+        padding: 40px 20px;
+        top: auto;
+    }
+    
+    .profile-image {
+        width: 200px;
+        height: 250px;
+    }
+    
+    .name {
+        font-size: 2.5rem;
+    }
+    
+    section {
+        margin-bottom: 40px;
+    }
+    
+    .links {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-content {
+        padding: 30px 20px;
+    }
+    
+    .name {
+        font-size: 2rem;
+    }
+    
+    .profile-image {
+        width: 160px;
+        height: 200px;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+    
+    .job h3,
+    .education-item h3 {
+        font-size: 1rem;
+    }
+}
